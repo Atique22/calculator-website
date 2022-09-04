@@ -39,10 +39,10 @@ function Area_calculator() {
 	var tri_b = document.getElementById("tri_b").value;
 	var tri_h = document.getElementById("tri_h").value;
 
-	// alert("Area is calling")
+	alert("Area is calling")
 	
-	document.getElementById("result_circle").value = ((num2 - num1)*100) / num1 + " sq" ;	
-	document.getElementById("result_square").value = ((num2 - num1)*100) / num1 + " sq" ;	
-	document.getElementById("result_rectangle").value = ((num2 - num1)*100) / num1 + " sq" ;	
-	document.getElementById("result_triangle").value = ((num2 - num1)*100) / num1 + " sq" ;	
+	document.getElementById("result_circle").value = radius*radius + " sq" ;	
+	document.getElementById("result_square").value = seq_len*seq_len + " sq" ;	
+	document.getElementById("result_rectangle").value = rec_wid * rec_len + " sq" ;	
+	document.getElementById("result_triangle").value = (tri_b* tri_h)/ 2 + " sq" ;	
 }
