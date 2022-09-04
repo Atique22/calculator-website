@@ -57,3 +57,13 @@ function convertor_calculator_2() {
 	var Nm = document.getElementById("nm").value;
 	document.getElementById("result2").value = Nm/1.356 + " ft-lbs" ;	
 }
+
+
+// liquid convertor Calculator
+function convertor_liquid_calculator(){
+
+	var weight = document.getElementById("weight").value;
+	document.getElementById("volume").value = weight+ " liter" ;	
+
+	// alert("liquid call")
+}
