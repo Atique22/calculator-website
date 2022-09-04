@@ -63,39 +63,46 @@ function convertor_calculator_2() {
 function convertor_liquid_calculator(){
 	var liquid = document.getElementById("liquid").value;
 	var weight = document.getElementById("weight").value;
-	if(liquid === "Water")
+	if(liquid === "Fresh Water")
 	{
-		document.getElementById("volume").value = liquid+ " liter" ;
+		// liter = weight / density  Though 1 liter of water equals 1 kg, 1 liter of milk equals 1.03 kg.
+		document.getElementById("volume").value = weight  + " liter" ;
+
+	}else if(liquid === "Salt Water"){
+
+		// Though 1 liter of water equals 1 kg, 1 liter of milk equals 1.03 kg.
+		document.getElementById("volume").value = weight / 1.03092783505+ " liter" ;
 
 	}else if(liquid === "Milk"){
 
-		document.getElementById("volume").value = liquid+ " liter" ;
+		document.getElementById("volume").value = weight / 1.03092783505 + " liter" ;
 
 	}else if(liquid === "Honey"){
 		
-		document.getElementById("volume").value = liquid+ " liter" ;
+		document.getElementById("volume").value = weight/1.42857142857 + " liter" ;
 
 	}else if(liquid === "Butter"){
 
-		document.getElementById("volume").value = liquid+ " liter" ;
+		document.getElementById("volume").value = weight / 0.96153846154 + " liter" ;
 
 
-	}else if(liquid === "Butter"){
+	}else if(liquid === "Cooking oil"){
 
-		document.getElementById("volume").value = liquid+ " liter" ;
+		document.getElementById("volume").value = weight /0.87719298246 + " liter" ;
 
-	}else if(liquid === "Butter"){
+	}else if(liquid === "Olive oil"){
 
-		document.getElementById("volume").value = liquid+ " liter" ;
+		document.getElementById("volume").value = weight / 0.91743119266+ " liter" ;
 
-	}else if(liquid === "Butter"){
+	}else if(liquid === "Sunflower oil"){
 
-		document.getElementById("volume").value = liquid+ " liter" ;
+		document.getElementById("volume").value = weight / 0.96153846154+ " liter" ;
 
+	}else if(liquid === "Vegetable oil"){
+
+		document.getElementById("volume").value =weight / 0.89285714286 + " liter" ;
+
+	}else{
+		alert("Enter Valid state");
 	}
-
-
-	
-
-	// alert("liquid call")
 }
