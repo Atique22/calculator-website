@@ -38,10 +38,8 @@ function Area_calculator() {
 	var rec_wid = document.getElementById("rec_wid").value;
 	var tri_b = document.getElementById("tri_b").value;
 	var tri_h = document.getElementById("tri_h").value;
-
-	alert("Area is calling")
 	
-	document.getElementById("result_circle").value = radius*radius + " sq" ;	
+	document.getElementById("result_circle").value = Math.PI*radius*radius + " sq" ;	
 	document.getElementById("result_square").value = seq_len*seq_len + " sq" ;	
 	document.getElementById("result_rectangle").value = rec_wid * rec_len + " sq" ;	
 	document.getElementById("result_triangle").value = (tri_b* tri_h)/ 2 + " sq" ;	
