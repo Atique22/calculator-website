@@ -44,3 +44,11 @@ function Area_calculator() {
 	document.getElementById("result_rectangle").value = rec_wid * rec_len + " sq" ;	
 	document.getElementById("result_triangle").value = (tri_b* tri_h)/ 2 + " sq" ;	
 }
+
+// convertor Calculator
+
+function convertor_calculator() {
+	// Method returns the element 
+	var fluid_oz = document.getElementById("fluid_oz").value;
+	document.getElementById("result").value = fluid_oz/8 + " cup" ;	
+}
