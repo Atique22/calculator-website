@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Percentage Calculator</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a href="./index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <span class="ml-3 text-xl">5-Calculators</span>
+            </a>
+            <nav
+                class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a href="./Percentage_calculator.html" class="mr-5 hover:text-gray-900">Percentage Calculator</a>
+                <a href="./Increase_percentage_calculator.html" class="mr-5 hover:text-gray-900">Percentage Increase
+                    Calculator</a>
+                <a href="./Percentage_calculator.html" class="mr-5 hover:text-gray-900">Converter Calculator</a>
+                <a href="./Area_calculator.html" class="mr-5 hover:text-gray-900">Area Calculator</a>
+                <a href="./Percentage_calculator.html" class="mr-5 hover:text-gray-900">Percentage Calculator</a>
+            </nav>
+        </div>
+    </header>
+    <hr>
+    <!-- home body -->
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-20 mx-auto ">
+            <div class="flex flex-wrap -m-4  justify-center text-xl">
+
+                <div class="p-3 md:w-2/5">
+                    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                        <div class="container px-5 py-10 mx-auto ">
+                            
+                            <form>
+                                <div class="relative mb-4">
+                                    <label for="shape" class="leading-7 text-sm text-gray-600">Select Shape </label>
+                                    <select class="w-full bg-white rounded border border-gray-300
+                                focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3
+                                leading-8 transition-colors duration-200 ease-in-out"
+                                        onchange="if (this.value=='Circle'){
+                                            this.form['circle'].style.display='block';
+                                            this.form['rectangle1'].style.display='none';
+                                            this.form['rectangle2'].style.display='none';
+                                            this.form['square'].style.display='none';
+                                            this.form['triangle1'].style.display='none';
+                                            this.form['triangle2'].style.display='none';
+
+                                            this.form['result_circle'].style.display='block';
+                                            this.form['result_square'].style.display='none';
+                                            this.form['result_rectangle'].style.display='none';
+                                            this.form['result_triangle'].style.display='none';
+                                            
+
+                                        }
+                                        else if (this.value=='Square'){
+                                            this.form['circle'].style.display='none';
+                                            this.form['square'].style.display='block';
+                                            this.form['rectangle1'].style.display='none';
+                                            this.form['rectangle2'].style.display='none';
+                                            this.form['triangle1'].style.display='none';
+                                            this.form['triangle2'].style.display='none';
+
+                                            
+                                            this.form['result_circle'].style.display='none';
+                                            this.form['result_square'].style.display='block';
+                                            this.form['result_rectangle'].style.display='none';
+                                            this.form['result_triangle'].style.display='none';
+                                        }
+                                        else if (this.value=='Rectangle'){
+                                            this.form['circle'].style.display='none';
+                                            this.form['square'].style.display='none';
+                                            this.form['rectangle1'].style.display='block';
+                                            this.form['rectangle2'].style.display='block';
+                                            this.form['triangle1'].style.display='none';
+                                            this.form['triangle2'].style.display='none';
+
+                                            
+                                            this.form['result_circle'].style.display='none';
+                                            this.form['result_square'].style.display='none';
+                                            this.form['result_rectangle'].style.display='block';
+                                            this.form['result_triangle'].style.display='none';
+                                        }
+                                        else {
+                                            this.form['circle'].style.display='none';
+                                            this.form['square'].style.display='none';
+                                            this.form['rectangle1'].style.display='none';
+                                            this.form['rectangle2'].style.display='none';
+                                            this.form['triangle1'].style.display='block';
+                                            this.form['triangle2'].style.display='block';
+
+                                            
+                                            this.form['result_circle'].style.display='none';
+                                            this.form['result_square'].style.display='none';
+                                            this.form['result_rectangle'].style.display='none';
+                                            this.form['result_triangle'].style.display='block';
+                                        };">
+
+                                        <option >Select Shape</option>
+                                        <option value="Triangle">Triangle</option>
+                                        <option value="Circle">Circle</option>
+                                        <option value="Rectangle">Rectangle</option>
+                                        <option value="Square">Square</option>
+                                    </select>
+                                </div>
+                                <!-- circle  -->
+                                <input type="number" name="circle" style="display: none;" id="radius" placeholder="Enter Radius of circle" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
+                                <!-- Square -->
+                                <input type="number" name="square" style="display: none;" id="seq_len" placeholder="Enter length or width of Square" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
+                               <!-- Rectangle  -->
+                                <input type="number" name="rectangle1" style="display: none;" id="rec_len" placeholder="Enter length or Length of rectangle" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
+                                <input type="number" name="rectangle2" style="display: none;" id="rec_wid" placeholder="Enter length or width of rectangle" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
+                                <!-- Triangle  -->
+                                <input type="number" name="triangle1" style="display: none;" id="tri_b" placeholder="Enter Base of triangle" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
+                                <input type="number" name="triangle2" style="display: none;" id="tri_h" placeholder="Enter Height of triangle" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
+
+                                <button onclick="Area_calculator()"
+                                    class="text-white bg-indigo-500 border-0 py-2 px-6 my-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">Calculate</button><br>
+                                Area 
+                                 <input type="text" style="display: none;" id="result_circle" name="result_circle" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                 <input type="text" style="display: none;" id="result_square" name="result_square" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                 <input type="text" style="display: none;" id="result_rectangle" name="result_rectangle" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                 <input type="text" style="display: none;" id="result_triangle" name="result_triangle" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
