@@ -61,9 +61,41 @@ function convertor_calculator_2() {
 
 // liquid convertor Calculator
 function convertor_liquid_calculator(){
-
+	var liquid = document.getElementById("liquid").value;
 	var weight = document.getElementById("weight").value;
-	document.getElementById("volume").value = weight+ " liter" ;	
+	if(liquid === "Water")
+	{
+		document.getElementById("volume").value = liquid+ " liter" ;
+
+	}else if(liquid === "Milk"){
+
+		document.getElementById("volume").value = liquid+ " liter" ;
+
+	}else if(liquid === "Honey"){
+		
+		document.getElementById("volume").value = liquid+ " liter" ;
+
+	}else if(liquid === "Butter"){
+
+		document.getElementById("volume").value = liquid+ " liter" ;
+
+
+	}else if(liquid === "Butter"){
+
+		document.getElementById("volume").value = liquid+ " liter" ;
+
+	}else if(liquid === "Butter"){
+
+		document.getElementById("volume").value = liquid+ " liter" ;
+
+	}else if(liquid === "Butter"){
+
+		document.getElementById("volume").value = liquid+ " liter" ;
+
+	}
+
+
+	
 
 	// alert("liquid call")
 }
