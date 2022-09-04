@@ -47,8 +47,13 @@ function Area_calculator() {
 
 // convertor Calculator
 
-function convertor_calculator() {
+function convertor_calculator_1() {
 	// Method returns the element 
 	var fluid_oz = document.getElementById("fluid_oz").value;
 	document.getElementById("result").value = fluid_oz/8 + " cup" ;	
+}
+function convertor_calculator_2() {
+	// Method returns the element 
+	var Nm = document.getElementById("nm").value;
+	document.getElementById("result2").value = Nm/1.356 + " ft-lbs" ;	
 }
