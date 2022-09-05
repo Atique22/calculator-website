@@ -39,11 +39,27 @@ function Area_calculator() {
 	var rec_wid = document.getElementById("rec_wid").value;
 	var tri_b = document.getElementById("tri_b").value;
 	var tri_h = document.getElementById("tri_h").value;
+
+	// Ellipse  Area = π × a × b
+	var el_a = document.getElementById("el_a").value;
+	var el_b = document.getElementById("el_b").value;
+
+	// Trapezoid area = (a + b) × h / 2
+	var tra_a = document.getElementById("tra_a").value;
+	var tra_b = document.getElementById("tra_b").value;
+	var tra_h = document.getElementById("tra_h").value;
+
+	// Parallelogram Area = a × h
+	var par_b = document.getElementById("par_b").value;
+	var par_h = document.getElementById("par_h").value;
 	
 	document.getElementById("result_circle").value = Math.PI*radius*radius + " sq" ;	
 	document.getElementById("result_square").value = seq_len*seq_len + " sq" ;	
 	document.getElementById("result_rectangle").value = rec_wid * rec_len + " sq" ;	
 	document.getElementById("result_triangle").value = (tri_b* tri_h)/ 2 + " sq" ;	
+	document.getElementById("result_parallelogram").value = par_b* par_h + " sq" ;	
+	document.getElementById("result_trapezoid").value = (tra_a+tra_b)*tra_h/ 2 + " sq" ;	
+	document.getElementById("result_ellipse").value = Math.PI*el_a* el_b + " sq" ;	
 }
 
 // convertor Calculator
