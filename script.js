@@ -28,6 +28,7 @@ function percentage_3() {
     document.getElementById("value3b").value = num2 - num1 ;
 }
 
+
 // Area Calculator
 
 function Area_calculator() {

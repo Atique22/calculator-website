@@ -49,12 +49,17 @@
                                             this.form['square'].style.display='none';
                                             this.form['triangle1'].style.display='none';
                                             this.form['triangle2'].style.display='none';
-
+                                            //images call
+                                             document.getElementById('circle').style.display = 'block';
+                                             document.getElementById('square').style.display = 'none';
+                                             document.getElementById('rectangle').style.display = 'none';
+                                             document.getElementById('triangle').style.display = 'none';
+                                            //results call
                                             this.form['result_circle'].style.display='block';
                                             this.form['result_square'].style.display='none';
                                             this.form['result_rectangle'].style.display='none';
                                             this.form['result_triangle'].style.display='none';
-                                            
+
 
                                         }
                                         else if (this.value=='Square'){
@@ -63,9 +68,13 @@
                                             this.form['rectangle1'].style.display='none';
                                             this.form['rectangle2'].style.display='none';
                                             this.form['triangle1'].style.display='none';
-                                            this.form['triangle2'].style.display='none';
-
-                                            
+                                            this.form['triangle2'].style.display='none';                                           
+                                            //images call
+                                            document.getElementById('circle').style.display = 'none';
+                                            document.getElementById('square').style.display = 'block';
+                                            document.getElementById('rectangle').style.display = 'none';
+                                            document.getElementById('triangle').style.display = 'none';
+                                            //results call
                                             this.form['result_circle'].style.display='none';
                                             this.form['result_square'].style.display='block';
                                             this.form['result_rectangle'].style.display='none';
@@ -78,8 +87,13 @@
                                             this.form['rectangle2'].style.display='block';
                                             this.form['triangle1'].style.display='none';
                                             this.form['triangle2'].style.display='none';
-
                                             
+                                            //images call
+                                            document.getElementById('circle').style.display = 'none';
+                                            document.getElementById('square').style.display = 'none';
+                                            document.getElementById('rectangle').style.display = 'block';
+                                            document.getElementById('triangle').style.display = 'none';
+                                            //results call
                                             this.form['result_circle'].style.display='none';
                                             this.form['result_square'].style.display='none';
                                             this.form['result_rectangle'].style.display='block';
@@ -92,39 +106,57 @@
                                             this.form['rectangle2'].style.display='none';
                                             this.form['triangle1'].style.display='block';
                                             this.form['triangle2'].style.display='block';
-
-                                            
+                                           
+                                            //images call
+                                            document.getElementById('circle').style.display = 'none';
+                                            document.getElementById('square').style.display = 'none';
+                                            document.getElementById('rectangle').style.display = 'none';
+                                            document.getElementById('triangle').style.display = 'block';
+                                           //results call 
                                             this.form['result_circle'].style.display='none';
                                             this.form['result_square'].style.display='none';
                                             this.form['result_rectangle'].style.display='none';
                                             this.form['result_triangle'].style.display='block';
                                         };">
 
-                                        <option >Select Shape</option>
-                                        <option value="Triangle">Triangle</option>
                                         <option value="Circle">Circle</option>
+                                        <option value="Triangle">Triangle</option>
                                         <option value="Rectangle">Rectangle</option>
                                         <option value="Square">Square</option>
+                                        
                                     </select>
                                 </div>
+
                                 <!-- circle  -->
-                                <input type="number" name="circle" style="display: none;" id="radius" placeholder="Enter Radius of circle" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
+                                <div id="circle" >
+                                    <img alt="circle"  class="flex-shrink-0 rounded-lg w-20 h-20 p-3 object-cover object-center sm:mb-0 mb-4" src="./images/circle-r2.svg" align="right">
+                                </div>                                
+                                <input type="number" name="circle" id="radius" placeholder="Enter Radius of circle" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
                                 <!-- Square -->
+                                <div id="square" style="display: none;">
+                                    <img alt="square" class="flex-shrink-0 rounded-lg w-21 h-20 p-3 object-cover object-center sm:mb-0 mb-4" src="./images/square-r2.svg" align="right">
+                                </div>
                                 <input type="number" name="square" style="display: none;" id="seq_len" placeholder="Enter length or width of Square" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
                                <!-- Rectangle  -->
+                               <div id="rectangle" style="display: none;">
+                                <img alt="rectangle"  class="flex-shrink-0 rounded-lg w-20 h-21 p-2 object-cover object-center sm:mb-0 mb-4" src="./images/rectangle-r2.svg" align="right">
+                                 </div>
                                 <input type="number" name="rectangle1" style="display: none;" id="rec_len" placeholder="Enter length or Length of rectangle" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
                                 <input type="number" name="rectangle2" style="display: none;" id="rec_wid" placeholder="Enter length or width of rectangle" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
                                 <!-- Triangle  -->
+                                <div id="triangle" style="display: none;">
+                                    <img alt="triangle"  class="flex-shrink-0 rounded-lg w-20 h-21 p-3 object-cover object-center sm:mb-0 mb-4" src="./images/triangle1-r2.svg" align="right">
+                                </div>
                                 <input type="number" name="triangle1" style="display: none;" id="tri_b" placeholder="Enter Base of triangle" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
                                 <input type="number" name="triangle2" style="display: none;" id="tri_h" placeholder="Enter Height of triangle" class="w-full my-2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" /> 
 
                                 <button onclick="Area_calculator()" type="button"
                                     class="text-white bg-indigo-500 border-0 py-2 px-6 my-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">Calculate</button><br>
                                 Area 
-                                 <input type="text" style="display: none;" id="result_circle" name="result_circle" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
-                                 <input type="text" style="display: none;" id="result_square" name="result_square" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
-                                 <input type="text" style="display: none;" id="result_rectangle" name="result_rectangle" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
-                                 <input type="text" style="display: none;" id="result_triangle" name="result_triangle" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                 <input type="text"  placeholder="Circle Area" id="result_circle" name="result_circle" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                 <input type="text" placeholder="square Area" style="display: none;" id="result_square" name="result_square" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                 <input type="text" placeholder="rectangle Area" style="display: none;" id="result_rectangle" name="result_rectangle" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                 <input type="text" placeholder="triangle Area" style="display: none;" id="result_triangle" name="result_triangle" readonly class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                             </form>
 
                         </div>
